@@ -1,0 +1,6 @@
+import {test} from "Test"
+export function oleaptest(){
+	console.log(222)
+	console.log(test)
+	test()
+}

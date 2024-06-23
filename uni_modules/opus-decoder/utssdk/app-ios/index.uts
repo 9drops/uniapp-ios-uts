@@ -1,0 +1,27 @@
+/**
+ * 引用 iOS 系统库，示例如下：
+ * import { UIDevice } from "UIKit";
+ * [可选实现，按需引入]
+ */
+
+/**
+ * 引入三方库
+ * [可选实现，按需引入]
+ *
+ * 在 iOS 平台引入三方库有以下两种方式：
+ * 1、通过引入三方库framework 或者.a 等方式，需要将 .framework 放到 ./Frameworks 目录下，将.a 放到 ./Libs 目录下。更多信息[详见](https://uniapp.dcloud.net.cn/plugin/uts-plugin.html#ios-平台原生配置)
+ * 2、通过 cocoaPods 方式引入，将要引入的 pod 信息配置到 config.json 文件下的 dependencies-pods 字段下。详细配置方式[详见](https://uniapp.dcloud.net.cn/plugin/uts-ios-cocoapods.html)
+ *
+ * 在通过上述任意方式依赖三方库后，使用时需要在文件中 import:
+ * 示例：import { LottieLoopMode	} from 'Lottie'
+ * 更多插件开发的信息详见：https://uniapp.dcloud.net.cn/plugin/uts-plugin.html
+ */
+
+import { Int } from 'Swift';
+
+import { opus2wav } from "OpusDecoder";
+
+///Opus functions
+export function uts_opus2wav(opusFilePath: string, wavFilePath: string): Int {
+	return opus2wav(opusFilePath, wavFilePath) as Int
+}
